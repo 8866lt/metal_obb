@@ -1,28 +1,35 @@
-# 模型权重（体积大，用 Git LFS 或单独存储）
+# 模型权重
 *.pt
 *.onnx
 *.engine
-*.trt
 
-# 数据集（不入版本控制）
+# 数据集（原始数据和转换后的数据集）
 data/raw/
 data/dataset/
 
 # 训练输出
 runs/
+scripts/runs/
 
-# Python
+# Python 缓存
 __pycache__/
 *.pyc
 *.pyo
-.venv/
 *.egg-info/
+.venv/
 
 # ROS2 编译产物
 deploy/ros2_ws/build/
 deploy/ros2_ws/install/
 deploy/ros2_ws/log/
 
+# 推理输出图
+deploy/output/
+
+# 打包文件
+deploy/ros2_metal_obb.zip
+
 # 系统文件
 .DS_Store
 *.swp
+*.cache
